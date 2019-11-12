@@ -1,0 +1,8 @@
+do everything the homework specifies.
+create 2 inputs to be taken from terminal
+retrieve information from spotify
+1. send api request
+2. console.log() what I want from request
+3. allow user to enter song from terminal
+add screenshots and videos of working CLI app for readme.md
+

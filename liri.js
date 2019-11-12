@@ -12,7 +12,7 @@ var spotifyId = new Spotify({
 });
 
 const command = process.argv[2];
-const song = process.argv[3];
+const song = process.argv[3].split(" ").join("+");
 
 
 switch (command) {
@@ -23,14 +23,15 @@ switch (command) {
 
 
 function spotifyAPI() {
-    spotifyId.search({ type: 'track', query: 'All the Small Things' }, function (err, data) {
+    spotifyId.search({ type: 'track', query: song }, function (err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
         }
-
-        console.log(JSON.stringify(data.tracks.items[0].artists[0].name, null, 2));
+        
         console.log(JSON.stringify(data.tracks.items[0].name, null, 2));
+        console.log(JSON.stringify(data.tracks.items[0].artists[0].name, null, 2));
         console.log(JSON.stringify(data.tracks.items[0].external_urls.spotify, null, 2));
+        console.log(JSON.stringify(data.tracks.items[0].album.name, null, 2));
     });
 }
 
