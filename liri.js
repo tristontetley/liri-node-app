@@ -39,6 +39,7 @@ function switchCase(command, search) {
 }
 
 function spotifyAPI(search) {
+    search = search || "The Sign"
     spotifyId.search({ type: 'track', query: search }, function (err, data) {
         if (err) {
             return console.log('Error occurred: ' + err);
