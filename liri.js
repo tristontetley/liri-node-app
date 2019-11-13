@@ -18,7 +18,7 @@ var spotifyId = new Spotify({
 });
 
 const command = process.argv[2];
-const search = process.argv.slice(3).join(" ");
+let search = process.argv.slice(3).join(" ");
 
 function switchCase(command, search) {
     switch (command) {
@@ -26,6 +26,7 @@ function switchCase(command, search) {
             spotifyAPI(search);
             break;
         case ("concert-this"):
+            search = process.argv.slice(3).join("-");
             seatGeekAPI(search);
             break;
         case ("movie-this"):
