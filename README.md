@@ -161,3 +161,8 @@ require("dotenv").config();
      * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
 
      * Edit the text in random.txt to test out the feature for movie-this and concert-this.
+
+     ============================================
+     This is a very good activity to work on to slowly learn more about what you can do with node.js
+
+     Figuring out how to make the "do-what-it-says" work was a bit challenging.
